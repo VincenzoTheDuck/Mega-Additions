@@ -1,0 +1,49 @@
+health: 700
+shootY: 0
+range: 120
+consumes: {
+  power: 2.3
+}
+reload: 50
+recoil: 0
+shootSound: lasershoot
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-arrows"
+      progress: warmup
+      color: ffffff00
+      colorTo: ffffff
+      outline: false
+      blending: additive
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  homingPower: 0.093
+  sprite: circle-bullet
+  speed: 3
+  damage: 25
+  splashDamage: 32
+  splashDamageRadius: 10
+  width: 2
+  height: 2
+  trailWidth: 1
+  trailLength: 12
+  backColor: 7382f0
+  frontColor: 7382f0
+  trailColor: 7382f0
+  lightColor: 7382f0
+  shrinkY: 0
+  despawnHit: true
+  hitEffect: hitLancer
+  despawnEffect: none
+}
+research: arc
+category: turret
+requirements: [
+  silicon/25
+]

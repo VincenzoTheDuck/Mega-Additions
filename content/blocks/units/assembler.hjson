@@ -1,0 +1,20 @@
+size: 2
+consumes: {
+  power: 0.87
+}
+plans: [
+  {
+    unit: y01-disagreement
+    time: 600
+    requirements: [
+      silicon/10
+      graphite/25
+    ]
+  }
+]
+requirements: [
+  copper/75
+  silicon/40
+]
+research: ground-factory
+category: units

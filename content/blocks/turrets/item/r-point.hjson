@@ -1,0 +1,126 @@
+health: 75
+shoot: {
+  type: ShootPattern
+  shots: 3
+  shotDelay: 3
+}
+reload: 45
+recoil: 1.7
+range: 200
+shootSound: pew
+smokeEffect: {
+  type: ParticleEffect
+  cone: 30
+  particles: 12
+  colorFrom: 7a7a7a7a
+  colorTo: 4f4f5900
+  sizeFrom: 5
+  sizeTo: 0
+  length: 16
+  interp: pow5Out
+  lifetime: 45
+}
+shootEffect: shootSmallFlame
+ammoTypes: {
+  copper: {
+    type: BasicBulletType
+    damage: 23
+    splashDamage: 9
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        smokeCloud
+        hitMeltdown
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 12
+          lifetime: 20
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: ffffff
+          colorTo: 747484
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+  silicon: {
+    type: BasicBulletType
+    damage: 14
+    splashDamage: 8
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    backColor: 4f4f59ff
+    frontColor: 7a7a7a7a
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        smokeCloud
+        hitMeltdown
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 12
+          lifetime: 20
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: ffffff
+          colorTo: 747484
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+  pyratite: {
+    type: BasicBulletType
+    damage: 32
+    splashDamage: 12
+    status: burning
+    statusDuration: 120
+    splashDamageRadius: 12
+    width: 9
+    height: 17
+    speed: 3
+    lifetime: 40
+    backColor: fc8e6c
+    frontColor: feb380
+    incendChance: 1
+    incendSpread: 3.5
+    incendAmount: 1
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        smokeCloud
+        hitMeltdown
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 12
+          lifetime: 20
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: ffffff
+          colorTo: 747484
+        }
+      ]
+    }
+    despawnEffect: none
+    despawnHit: true
+  }
+}
+research: duo
+category: turret
+requirements: [
+  copper/60
+]

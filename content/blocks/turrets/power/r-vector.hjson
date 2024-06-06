@@ -1,0 +1,147 @@
+size: 3
+health: 2300
+range: 410
+reload: 85
+recoil: 4.3
+shootSound: malignShoot
+cooldownTime: 30
+consumes: {
+  power: 4.2
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-spikes"
+      moveX: -1.2
+      moveY: -1.2
+      progress: recoil
+      mirror: true
+      under: true
+    }
+    {
+      type: RegionPart
+      suffix: "-glow"
+      color: e5666600
+      colorTo: e56666
+      outline: false
+      blending: additive
+      layerOffset: 0.03
+    }
+    {
+      type: RegionPart
+      suffix: "-top"
+      layerOffset: 0.06
+      outline: false
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  sprite: circle-bullet
+  damage: 82
+  speed: 3
+  lifetime: 120
+  splashDamage: 30
+  splashDamageRadius: 70
+  backColor: e56666
+  frontColor: ffffff
+  width: 4
+  height: 4
+  trailWidth: 2
+  trailLength: 15
+  trailColor: e56666
+  homingPower: 0.18
+  hitSound: plasmaboom
+  lightning: 5
+  lightningColor: e56666
+  lightningLength: 10
+  lightningLengthRand: 1
+  lightningDamage: 20
+  lightningType: {
+    type: BasicBulletType
+      sprite: circle-bullet
+      damage: 7
+      lifetime: 26
+      speed: 1
+      drag: -0.1
+      backColor: e56666
+      frontColor: ffffff
+      width: 2
+      height: 2
+      shrinkY: 0
+      hitEffect: blastExplosion
+      despawnEffect: none
+      despawnHit: true
+      trailWidth: 1
+      trailLength: 7
+      trailColor: e56666
+  }
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 35
+        colorFrom: ffffff
+        colorTo: e56666
+        lifetime: 20
+      }
+      {
+        type: WaveEffect
+        sizeFrom: 35
+        sizeTo: 70
+        colorFrom: ffffff
+        colorTo: e56666
+        lifetime: 20
+      }
+      {
+        type: ParticleEffect
+        sizeFrom: 17
+        sizeTo: 0
+        colorFrom: 989aa4
+        colorTo: 6e7080
+        lifetime: 85
+        interp: pow5Out
+        particles: 13
+        length: 73
+      }
+      {
+        type: ParticleEffect
+        sizeFrom: 17
+        sizeTo: 0
+        colorFrom: e78888ff
+        colorTo: e5666600
+        lifetime: 68
+        interp: pow5Out
+        particles: 8
+        length: 67
+      }
+      {
+        type: ParticleEffect
+        lenFrom: 7.5
+        lenTo: 0
+        strokeFrom: 3.2
+        strokeTo: 1.2
+        colorFrom: e78888ff
+        colorTo: e5666600
+        lifetime: 32
+        length: 80
+        interp: pow5Out
+      }
+    ]
+  }
+  despawnEffect: none
+  despawnHit: true
+}
+research: r-angle
+category: turret
+requirements: [
+  copper/200
+  lead/130
+  silicon/320
+  graphite/80
+  metaglass/40
+]

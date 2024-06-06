@@ -1,0 +1,111 @@
+health: 3200
+size: 3
+range: 300
+reload: 100
+shootSound: missile
+shoot: {
+  type: ShootSpread
+  shots: 3
+  spread: 10
+}
+recoil: 2
+consumes: {
+  power: 4.2
+  liquid: water/0.05
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-blade"
+      under: true
+      mirror: true
+      moveX: -1
+      moveRot: 6
+      progress: warmup
+      moves: [
+        {
+          type: PartMove
+          progress: reload
+          x: -1
+          y: -2.2
+          rot: 3
+        }
+      ]
+      children: [
+        {
+          type: RegionPart
+          suffix: "-blade-glow"
+          progress: warmup
+          color: 8aa3f400
+          colorTo: 8aa3f4
+          blending: additive
+          outline: false
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: "-glow"
+      progress: warmup
+      color: 8aa3f400
+      colorTo: 8aa3f4
+      blending: additive
+      outline: false
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  backColor: 8aa3f4
+  frontColor: 8aa3f4
+  homingPower: 0.17
+  speed: 3
+  lifetime: 120
+  sprite: circle-bullet
+  shrinkY: 0
+  width: 6
+  height: 6
+  trailWidth: 3
+  trailLength: 16
+  trailColor: 8aa3f4
+  damage: 30
+  splashDamage: 65
+  splashDamageRadius: 35
+  despawnHit: true
+  despawnEffect: none
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 35
+        lifetime: 30
+        colorFrom: ffffff
+        colorTo: 8aa3f4
+        strokeFrom: 5
+        strokeTo: 0
+      }
+      hitLancer
+      smokeCloud
+    ]
+  }
+  intervalBullet: {
+    // for show only
+    type: LightningBulletType
+    damage: 0.000000001
+    lightningLength: 4
+    lightningColor: 8aa3f4
+  }
+  bulletInterval: 3
+  intervalBullets: 4
+  intervalRandomSpread: 360
+}
+research: b-blitz
+category: turret
+requirements: [
+  lead/300
+  titanium/445
+]

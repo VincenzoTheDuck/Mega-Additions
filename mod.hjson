@@ -1,0 +1,10 @@
+name: "mega-adds"
+displayName: "Mega Additions"
+description: '''
+  Adds a lot of content.
+'''
+author: '''
+  Mega Industries
+'''
+minGameVersion: 136.1
+version: 2.0

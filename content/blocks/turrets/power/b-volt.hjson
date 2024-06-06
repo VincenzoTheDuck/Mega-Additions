@@ -1,0 +1,92 @@
+size: 2
+health: 1320
+range: 400
+shoot: {
+  type: ShootHelix
+  shots: 2
+  scl: 2
+  mag: 2
+}
+shootSound: blaster
+shootEffect: none
+smokeEffect: {
+  type: ParticleEffect
+  cone: 35
+  colorFrom: 8aa3f4
+  colorTo: 8aa3f400
+  length: 32
+  lifetime: 65
+  sizeFrom: 4
+  sizeTo: 0
+  interp: pow5Out
+}
+consumes: {
+  power: 3.5
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-side"
+      mirror: true
+      moveX: -1.8
+      progress: warmup
+      children: [
+        {
+          type: RegionPart
+          suffix: "-side-bar"
+          moveY: 3.1
+          progress: warmup
+          heatProgress: warmup
+          heatColor: 8aa3f4f0
+          under: true
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: "-mid"
+      heatProgress: warmup
+      heatColor: 8aa3f4f0
+      under: true
+    }
+  ]
+}
+shootType: {
+  type: MissileBulletType
+  damage: 20
+  splashDamage: 35
+  splashDamageRadius: 20
+  weaveScale: 0
+  weaveMag: 0
+  width: 2
+  height: 2
+  backColor: 8aa3f4
+  frontColor: ffffff
+  trailColor: 8aa3f4
+  speed: 7
+  lifetime: 60
+  trailChance: 0
+  trailWidth: 1
+  trailLength: 9
+  sprite: circle-bullet
+  hitEffect: {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 20
+    lifetime: 20
+    colorFrom: 8aa3f4
+    colorTo: 8aa3f4
+  }
+  despawnEffect: none
+  despawnHit: true
+}
+category: turret
+research: b-blitz
+requirements: [
+  titanium/120
+  copper/100
+  silicon/30
+  graphite/70
+]

@@ -1,0 +1,16 @@
+size: 2
+health: 800
+reload: 70
+cooldownTime: 60
+shootSound: bitShoot
+consumes: {
+  power: 3.1
+}
+shootCone: 45
+research: b-volt
+category: turret
+requirements: [
+  graphite/70
+  titanium/120
+  silicon/90
+]

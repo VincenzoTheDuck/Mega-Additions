@@ -1,0 +1,28 @@
+health: 350
+range: 190
+reload: 35
+recoil: 2
+cooldownTime: 40
+shootSound: bigshot
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    width: 13
+    height: 13
+    damage: 20
+    shrinkY: 0
+    sprite: large-bomb
+    spin: 2
+    despawnHit: true
+    hitEffect: flakExplosion
+    despawnEffect: none
+    speed: 4.6
+    lifetime: 43
+  }
+}
+category: turret
+research: duo
+requirements: [
+  graphite/10
+  lead/20
+]

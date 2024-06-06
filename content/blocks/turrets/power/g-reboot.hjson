@@ -1,0 +1,23 @@
+health: 320
+range: 180
+consumes: {
+  power: 1
+}
+targetHealing: true
+shootSound: lasershoot
+shootType: {
+  type: LaserBoltBulletType
+  damage: 3
+  collidesTeam: true
+  healPercent: 3
+  speed: 6
+  lifetime: 30
+  frontColor: ffffff
+  backColor: 83f793
+}
+category: turret
+research: duo
+requirements: [
+  graphite/60
+  lead/40
+]

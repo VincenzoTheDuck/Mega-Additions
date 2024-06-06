@@ -1,0 +1,81 @@
+size: 2
+range: 200
+health: 650
+reload: 150
+consumes: {
+  power: 6.3
+}
+rotateSpeed: 3.4
+shake: 1.5
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-glow"
+      color: e5666600
+      colorTo: e56666
+      progress: warmup
+      blending: additive
+      outline: false
+    }
+    {
+      type: RegionPart
+      suffix: "-wing"
+      mirror: true
+      progress: warmup
+      moveX: -2.2
+      under: true
+      children: [
+        {
+          type: HaloPart
+          progress: {
+            type: warmup
+            delay: 3.5
+          }
+          progress: warmup
+          haloRadius: 0
+          haloRadiusTo: 0
+          shapes: 1
+          color: e56666ff
+          stroke: 0
+          strokeTo: 0
+          tri: true
+          triLength: 0
+          triLengthTo: 12
+          mirror: true
+          y: 2.2
+          x: -2
+        }
+        {
+          type: HaloPart
+          progress: {
+            type: warmup
+            delay: 3.5
+          }
+          progress: warmup
+          haloRadius: 0
+          haloRadiusTo: 0
+          shapes: 1
+          color: e56666
+          stroke: 0
+          strokeTo: 0
+          tri: true
+          triLength: 0
+          triLengthTo: 2
+          mirror: true
+          shapeRotation: 180
+          y: 2.2
+          x: -2
+        }
+      ]
+    }
+  ]
+}
+category: turret
+research: r-point
+requirements: [
+  lead/120
+  graphite/40
+  silicon/60
+]

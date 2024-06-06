@@ -1,0 +1,128 @@
+health: 3780
+range: 165
+size: 3
+targetHealing: true
+reload: 135
+cooldownTime: 55
+recoil: 2
+accurateDelay: true
+moveWhileCharging: false
+shootEffect: none
+smokeEffect: none
+chargeSound: lasercharge2
+shootSound: laser
+consumes: {
+  power: 4.7
+}
+shoot: {
+  firstShotDelay: 100
+}
+ammoPerShot: 5
+ammoTypes: {
+  plastanium: {
+    type: LaserBulletType
+    chargeEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          lifetime: 100
+          colorFrom: cbd97f00
+          colorTo: cbd97f
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -45
+          length: 45
+          particles: 15
+        }
+        {
+          lifetime: 70
+          colorFrom: cbd97f00
+          colorTo: cbd97f
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -65
+          length: 65
+          offset: 30
+          particles: 10
+        }
+      ]
+    }
+    colors: [cbd97ff0, cbd97f, ffffff]
+    length: 173
+    sideAngle: 25
+    damage: 192
+    lifetime: 16
+    drawSize: 400
+    pierceCap: 3
+    buildingDamageMultiplier: 0.7
+    healPercent: 4
+  }
+  warp-alloy: {
+    type: LaserBulletType
+    chargeEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          lifetime: 100
+          colorFrom: 83f79300
+          colorTo: 83f793
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -45
+          length: 45
+          particles: 15
+        }
+        {
+          lifetime: 70
+          colorFrom: 83f79300
+          colorTo: 83f793
+          sizeFrom: 0
+          sizeTo: 2
+          baseLength: -65
+          length: 65
+          offset: 30
+          particles: 10
+        }
+      ]
+    }
+    colors: [83f793f0, 83f793, ffffff]
+    length: 210
+    sideAngle: 25
+    damage: 192
+    lifetime: 16
+    drawSize: 400
+    pierceCap: 3
+    buildingDamageMultiplier: 0.73
+    healPercent: 6
+  }
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-glow"
+      progress: charge
+      outline: false
+      color: 83f79300
+      colorTo: 83f793
+      mirror: false
+    }
+    {
+      type: RegionPart
+      suffix: "-rod"
+      progress: charge
+      moveY: 3.5
+      mirror: false
+      under: true
+    }
+  ]
+}
+category: turret
+research: g-sword
+requirements: [
+  plastanium/120
+  thorium/30
+  silicon/80
+  warp-alloy/80
+]

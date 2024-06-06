@@ -1,0 +1,13 @@
+sector: 173
+research: {
+parent: craters
+objectives: [
+    {
+      type: SectorComplete
+      preset: craters
+    }
+    kiln
+    mechanical-pump
+    conduit
+  ]
+}

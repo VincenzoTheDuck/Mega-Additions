@@ -1,0 +1,58 @@
+size: 2
+health: 3200
+consumes: {
+  power: 3.3
+  liquid: water/0.06
+}
+shootSound: pulseBlast
+reload: 95
+recoil: 1.2
+range: 200
+shoot: {
+  type: ShootAlternate
+  barrels: 2
+  shots: 2
+  spread: 5.3
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-arrows"
+      moveY: 5.3
+      under: true
+      color: e5666600
+      colorTo: e56666
+      blending: additive
+      outline: false
+    }
+  ]
+}
+shootType: {
+  type: BasicBulletType
+  sprite: missile-large
+  damage: 65
+  width: 10
+  height: 20
+  backColor: e56666
+  frontColor: e78888
+  trailColor: e56666
+  trailWidth: 3.5
+  trailLength: 13
+  trailEffect: disperseTrail
+  trailRotation: true
+  trailInterval: 3
+  lifetime: 60
+  speed: 6
+  hitEffect: blastExplosion
+  despawnEffect: none
+  despawnHit: true
+}
+category: turret
+research: r-angle
+requirements: [
+  copper/110
+  graphite/300
+  silicon/200
+]

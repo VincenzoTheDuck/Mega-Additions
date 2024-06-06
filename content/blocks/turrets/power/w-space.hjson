@@ -1,0 +1,37 @@
+size: 3
+health: 1200
+consumes: {
+  power: 4.2
+}
+chargeSound: blastCharge
+shootSound: blastShoot
+shootY: 0
+recoil: 2
+cooldownTime: 130
+reload: 130
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-wing"
+      mirror: true
+      moveX: -2.2
+      progress: charge
+      moves: [
+        {
+          progress: recoil
+          x: -2.2
+          y: -3.2
+        }
+      ]
+    }
+  ]
+}
+category: turret
+requirements: [
+  copper/120
+  titanium/30
+  lead/80
+  metaglass/45
+]
