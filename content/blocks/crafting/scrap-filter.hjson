@@ -28,10 +28,10 @@ category: crafting
 research: {
   parent: graphite-press
   objectives: [
-    {
-      // type: SectorComplete
-      // preset: crystal-refining-site
-    }
+    /* {
+      type: SectorComplete
+      preset: crystal-refining-site
+    } */
   ]
 }
 requirements: [
